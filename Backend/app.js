@@ -25,6 +25,19 @@ app.use((req, res, next) => {
     next();
 });
 
+// Ruta o metodo de prueba
+app.get('/probando', (req,res) => {
+    return res.status(200).send(`
+    <ul>
+        <li>NodeJs</li>
+    </ul>
+    `);
+});
+
+
+
+
+
 //Añadir prefijos a rutas / Cargar rutas
 app.use('/api',article_routes);
 
